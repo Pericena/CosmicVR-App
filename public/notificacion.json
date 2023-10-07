@@ -2,14 +2,14 @@
   {
     "notificaciones": [
       {
-        "title": "Nos Gusta La Ciencia",
+        "title": "CosmicVR-AI-App",
         "body": "Programa de divulgación científica para estudiantes apasionados por STEM..",
         "icon": "assets/images/logo/s2.png",
         "silent": false,
         "sound": "assets/sonido/music.mp3"
       },
       {
-        "title": "Nos Gusta La Ciencia2",
+        "title": "CosmicVR-AI-App",
         "body": "Programa de divulgación científica para estudiantes apasionados por STEM..",
         "icon": "assets/images/logo/s2.png",
         "silent": true,

@@ -1,6 +1,6 @@
 {
-    "name": "Nos Gusta La Ciencia",
-    "short_name": "Nos Gusta La Ciencia",
+    "name": "CosmicVR-AI-App",
+    "short_name": "CosmicVR-AI-App",
     "description": "Programa de divulgación científica para estudiantes apasionados por STEM...",
     "background_color": "#ffffff",
     "theme_color": "#99ca61",
@@ -11,52 +11,52 @@
     "lang": "es-MX",
     "icons": [
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "1024x1024",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "512x512",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "384x384",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "256x256",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "192x192",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "128x128",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "96x96",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "64x64",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "32x32",
         "type": "image/png"
       },
       {
-        "src": "./assets/images/logo/NOS-GUSTA-LA-CIENCIA.png",
+        "src": "./assets/images/logo/CosmicVR-AI-App.png",
         "sizes": "16x16",
         "type": "image/png"
       }

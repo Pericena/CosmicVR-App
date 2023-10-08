@@ -16,7 +16,7 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="assets/images/logo/logo-1.png" type="image/svg+xml">
+  <link rel="shortcut icon" href="assets/images/logo/CosmicVR-AI-App.png" type="image/svg+xml">
 
 
     <!-- Archivo de manifiesto de la aplicación web -->
@@ -48,6 +48,7 @@
   <!-- 
     - google font link
   -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -88,23 +89,25 @@
         <ul class="navbar-list">
 
           <li class="navbar-item">
-            <a href="#home" class="navbar-link" data-nav-link>Inicio</a>
+            <a href="#home" class="navbar-link" data-nav-link><i class='bx bx-home-alt-2'></i>Home</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#shop" class="navbar-link" data-nav-link>Categoria</a>
+            <a href="#shop" class="navbar-link" data-nav-link><i class='bx bxs-rocket'></i>Collection</a>
           </li>
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Colección</a>
+            <a href="#" class="navbar-link" data-nav-link><i class='bx bxs-planet'></i>category</a>
           </li>
+
+
 
           <!-- <li class="navbar-item">
             <a href="#" class="navbar-link" data-nav-link>Blogs</a>
           </li> -->
 
           <li class="navbar-item">
-            <a href="#" class="navbar-link" data-nav-link>Chat</a>
+            <a href="#" class="navbar-link" data-nav-link><i class='bx bxs-message-dots'></i>Chat</a>
           </li>
 
         </ul>
@@ -119,13 +122,14 @@
         </button>
 
         <button class="action-btn user" aria-label="User">
-          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+          <!-- <ion-icon name="person-outline" aria-hidden="true"></ion-icon> -->
+          <i class='bx bxs-user' aria-hidden="true"></i>
         </button>
 
         <button class="action-btn" aria-label="cart">
-          <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
-
-          <span class="btn-badge">0</span>
+          <!-- <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon> -->
+          <i class='bx bxs-bell' aria-hidden="true" ></i>
+          <span class="btn-badge" style="background-color: red;">5</span>
         </button>
 
       </div>
@@ -171,82 +175,94 @@
         <div class="container">
 
           <h2 class="h2 section-title">
-            <span class="span">Top</span> categories
+            <span class="span">augmented </span> reality RV
           </h2>
 
           <ul class="has-scrollbar">
 
             <li class="scrollbar-item">
               <div class="category-card">
-
+                <a href="pages/0.html" class="card-title">
                 <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
-                  <img src="./assets/images/category-1.jpg" width="330" height="300" loading="lazy" alt="Cat Food"
+                  <img src="./assets/images/rv-img/Screenshot_1.png" width="330" height="300" loading="lazy" alt="Cat Food"
                     class="img-cover">
                 </figure>
+                <i class='bx bxs-camera img-camara'></i>
+              </a>
 
                 <h3 class="h3">
-                  <a href="#" class="card-title">Cat Food</a>
+                  <a href="pages/0.html" class="card-title">Blackhole</a>
                 </h3>
+                <p style="text-align: center;font-size: 10px;">data</p>
+               
 
               </div>
             </li>
 
             <li class="scrollbar-item">
               <div class="category-card">
-
+                <a href="pages/1.html" class="card-title">
                 <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
-                  <img src="./assets/images/category-2.jpg" width="330" height="300" loading="lazy" alt="Cat Toys"
+                  <img src="./assets/images/rv-img/Screenshot_2.png" width="330" height="300" loading="lazy" alt="Cat Toys"
                     class="img-cover">
                 </figure>
-
+                <i class='bx bxs-camera img-camara'></i>
+              </a>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Cat Toys</a>
+                  <a href="pages/1.html" class="card-title">Nebula</a>
                 </h3>
+                <p style="text-align: center;font-size: 10px;">data</p>
 
               </div>
             </li>
 
             <li class="scrollbar-item">
               <div class="category-card">
-
+                <a href="pages/1.html" class="card-title">
                 <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
-                  <img src="./assets/images/category-3.jpg" width="330" height="300" loading="lazy" alt="Dog Food"
+                  <img src="./assets/images/rv-img/Screenshot_3.png" width="330" height="300" loading="lazy" alt="Dog Food"
                     class="img-cover">
                 </figure>
-
+                <i class='bx bxs-camera img-camara'></i>
+              </a>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Dog Food</a>
+                  <a href="pages/2.html" class="card-title">Blackhole</a>
                 </h3>
+                <p style="text-align: center;font-size: 10px;">data</p>
 
               </div>
             </li>
 
             <li class="scrollbar-item">
               <div class="category-card">
-
+                <a href="pages/1.html" class="card-title">
                 <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
-                  <img src="./assets/images/category-4.jpg" width="330" height="300" loading="lazy" alt="Dog Toys"
+                  <img src="./assets/images/rv-img/Screenshot_4.png" width="330" height="300" loading="lazy" alt="Dog Toys"
                     class="img-cover">
                 </figure>
-
+                <i class='bx bxs-camera img-camara'></i>
+              </a>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Dog Toys</a>
+                  <a href="pages/3.html" class="card-title">Blackhole</a>
                 </h3>
+                <p style="text-align: center;font-size: 10px;">data</p>
 
               </div>
             </li>
 
             <li class="scrollbar-item">
               <div class="category-card">
-
+                <a href="pages/1.html" class="card-title">
                 <figure class="card-banner img-holder" style="--width: 330; --height: 300;">
-                  <img src="./assets/images/category-5.jpg" width="330" height="300" loading="lazy"
+                  <img src="./assets/images/rv-img/Screenshot_5.png" width="330" height="300" loading="lazy"
                     alt="Dog Sumpplements" class="img-cover">
                 </figure>
-
+                <i class='bx bxs-camera img-camara'></i>
+              </a>
                 <h3 class="h3">
-                  <a href="#" class="card-title">Dog Sumpplements</a>
+                  <a href="pages/4.html" class="card-title">Blackhole</a>
                 </h3>
+                <p style="text-align: center;font-size: 10px;">data</p>
 
               </div>
             </li>
@@ -279,7 +295,7 @@
                   Hot Summer <span class="span">Deals</span>
                 </h3>
 
-                <a href="#" class="btn">Read More</a>
+                <a href="#" class="btn">Sala Proyeccion</a>
 
               </div>
             </li>
@@ -294,7 +310,7 @@
                   Spoil your true <span class="span">love</span>
                 </h3>
 
-                <a href="#" class="btn">Read More</a>
+                <a href="#" class="btn">Sala Proyeccion</a>
 
               </div>
             </li>
@@ -309,7 +325,7 @@
                   New in this <span class="span">year</span>
                 </h3>
 
-                <a href="#" class="btn">Read More</a>
+                <a href="pages/sala/index.html" class="btn">Sala Proyeccion</a>
 
               </div>
             </li>
@@ -333,7 +349,7 @@
         <div class="container">
 
           <h2 class="h2 section-title">
-            <span class="span">Colección</span> 3D
+            <span class="span">Collection</span> 3D
           </h2>
 
           <ul class="grid-list">
@@ -614,9 +630,9 @@
 
                     <span class="span">(0)</span>
                   </div>
-                  <data class="card-price" value="85">$85.00</data>
+                  <data class="card-price" value="85">Mars</data>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Morbi vel arcu scelerisque</a>
+                    <a href="#" class="card-title">data</a>
                   </h3>
 
                
@@ -672,9 +688,9 @@
 
                     <span class="span">(0)</span>
                   </div>
-                  <data class="card-price" value="85">$85.00</data>
+                  <data class="card-price" value="85">Jupiter</data>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Nam justo libero porta ege</a>
+                    <a href="#" class="card-title">data</a>
                   </h3>
 
               
@@ -727,9 +743,9 @@
 
                     <span class="span">(0)</span>
                   </div>
-                  <data class="card-price" value="85">$85.00</data>
+                  <data class="card-price" value="85">Saturn</data>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Nam justo libero porta ege</a>
+                    <a href="#" class="card-title">data</a>
                   </h3>
 
                   
@@ -782,9 +798,9 @@
 
                     <span class="span">(0)</span>
                   </div>
-                  <data class="card-price" value="55">$55.00</data>
+                  <data class="card-price" value="55">Uranus</data>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Etiam commodo leo sed</a>
+                    <a href="#" class="card-title">data</a>
                   </h3>
 
                   
@@ -839,9 +855,9 @@
 
                     <span class="span">(0)</span>
                   </div>
-                  <data class="card-price" value="55">$55.00</data>
+                  <data class="card-price" value="55">Neptune</data>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Etiam commodo leo sed</a>
+                    <a href="#" class="card-title">data</a>
                   </h3>
 
                  
@@ -895,9 +911,9 @@
 
                     <span class="span">(0)</span>
                   </div>
-                  <data class="card-price" value="55">$55.00</data>
+                  <data class="card-price" value="55">Pluto</data>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Etiam commodo leo sed</a>
+                    <a href="#" class="card-title">data</a>
                   </h3>
 
                   
@@ -951,9 +967,9 @@
 
                     <span class="span">(0)</span>
                   </div>
-                  <data class="card-price" value="55">$55.00</data>
+                  <data class="card-price" value="55">Moon</data>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Etiam commodo leo sed</a>
+                    <a href="#" class="card-title">data</a>
                   </h3>
 
                   
@@ -1006,9 +1022,9 @@
 
                     <span class="span">(0)</span>
                   </div>
-                  <data class="card-price" value="55">$55.00</data>
+                  <data class="card-price" value="55">Blackhole</data>
                   <h3 class="h3">
-                    <a href="#" class="card-title">Etiam commodo leo sed</a>
+                    <a href="#" class="card-title">data</a>
                   </h3>
 
                   
@@ -1031,13 +1047,13 @@
         - #SERVICE
       -->
 
-      <section class="section service" aria-label="service">
+      <!-- <section class="section service" aria-label="service">
         <div class="container">
 
-          <img src="./assets/images/service-image.png" width="122" height="136" loading="lazy" alt="" class="img">
+          <img src="./assets/images/logo/CosmicVR-AI-App.png" width="122" height="136" loading="lazy" alt="" class="img">
 
           <h2 class="h2 section-title">
-            <span class="span">What your pet needs,</span> when they need it.
+            <span class="span">Tu Puerta al Cosmos,</span> ¡Explora con Realidad Aumentada!.
           </h2>
 
           <ul class="grid-list">
@@ -1113,7 +1129,7 @@
           </ul>
 
         </div>
-      </section>
+      </section> -->
 
 
 
@@ -1135,15 +1151,13 @@
             <img src="./assets/images/cta-icon.png" width="120" height="35" loading="lazy" alt="taste guarantee"
               class="img">
 
-            <h2 class="h2 section-title">Taste it, love it or we’ll replace it… Guaranteed!</h2>
+            <h2 class="h2 section-title">Tu Puerta al Cosmos, ¡Explora con Realidad Aumentada!.</h2>
 
             <p class="section-text">
-              At Petio, we believe your dog and cat will love their food so much that if they don’t … we’ll help you
-              find a
-              replacement. That’s our taste guarantee.
+              Tu Puerta al Cosmos, ¡Explora con Realidad Aumentada!.
             </p>
 
-            <a href="#" class="btn">Find out more</a>
+            <a href="#" class="btn">Seguir</a>
 
           </div>
 
@@ -1225,7 +1239,7 @@
 
         <div class="footer-brand">
 
-          <a href="#" class="logo">Kitter</a>
+          <a href="#" class="logo">comet coders</a>
 
           <p class="footer-text">
             If you have any question, please contact us at <a href="mailto:support@gmail.com"
@@ -1245,7 +1259,7 @@
             <li class="contact-item">
               <ion-icon name="call-outline" aria-hidden="true"></ion-icon>
 
-              <a href="tel:+16234567891011" class="contact-link">(+1)-6234-56-789-1011</a>
+              <a href="tel:+16234567891011" class="contact-link">(+591)-0000000</a>
             </li>
 
           </ul>
@@ -1383,7 +1397,7 @@
       <div class="container">
 
         <p class="copyright">
-          &copy; 2022 Made with ♥ by <a href="#" class="copyright-link">codewithsadee.</a>
+          &copy; 2023 Made with ♥ by <a href="#" class="copyright-link">comet coders.</a>
         </p>
 
         <img src="./assets/images/payment.png" width="397" height="32" loading="lazy" alt="payment method" class="img">

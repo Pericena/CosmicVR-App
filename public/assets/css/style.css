@@ -21,7 +21,7 @@
    */
 
   --bright-yellow-crayola: hsl(36, 94%, 57%);
-  --portland-orange: rgb(6, 8, 29);
+  --portland-orange: rgb(3, 6, 33);
   --battleship-gray: hsl(0, 0%, 53%);
   --silver-chalice: hsl(0, 0%, 70%);
   --spanish-gray: hsl(0, 0%, 60%);
@@ -93,6 +93,13 @@ model-viewer {
   height: 80vh;
 }
 
+/* Estilo para el icono */
+.img-camara {
+  color: rgb(3, 6, 33);
+  font-size: 5em; /* Cambia el tamaño a tu preferencia */
+  position: relative; /* Permite la superposición */
+  top: -100px; /* Ajusta la posición vertical según tus necesidades */
+}
 
 /*-----------------------------------*\
   #RESET
@@ -190,7 +197,7 @@ body {
 
 .h2 { font-size: var(--fs-2); }
 
-.h3 { font-size: var(--fs-3); }
+.h3 { font-size: var(--fs-7); }
 
 .btn {
   background-color: var(--black);
@@ -419,6 +426,7 @@ body {
   margin-block-start: 15px;
   text-align: center;
   transition: var(--transition-1);
+
 }
 
 .category-card .card-title:is(:hover, :focus) { color: var(--portland-orange); }
@@ -500,7 +508,7 @@ body {
 
 .product-card .card-price {
   color: var(--portland-orange);
-  font-size: var(--fs-4);
+  font-size: var(--fs-5);
   font-weight: var(--fw-700);
 }
 

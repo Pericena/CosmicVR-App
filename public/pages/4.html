@@ -1,56 +1,190 @@
 <!DOCTYPE html>
-
 <html>
-  <head>
-    <title>Realidad Aumentada AR</title>
+<head>
+    <title>Realidad Aumentada con AR.js</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/images/logo/CosmicVR-AI-App.png" type="image/svg+xml">
+
+
+    <link rel="stylesheet" href="sala/sonido/style.css">
+
+      <!-- 
+    - google font link
+  -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+
 
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
     <script src="gesture-detector.js"></script>
     <script src="gesture-handler.js"></script>
-  </head>
 
-  <body>
 
-    <a-scene
-      arjs
-      embedded
-      renderer="logarithmicDepthBuffer: true;"
-      vr-mode-ui="enabled: false"
-      gesture-detector
-      id="scene"
+</head>
+<body id="top">
+
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
+      </button>
+
+      <!-- <a href="#" class="logo">C-coders</a> -->
+      <!-- <img src="assets/images/logo/CosmicVR-AI-App-2.png" alt="" width="80" height="80" style="background-color: black;"> -->
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link><i class='bx bx-home-alt-2'></i>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#shop" class="navbar-link" data-nav-link><i class='bx bxs-rocket'></i>Collection</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link><i class='bx bxs-planet'></i>category</a>
+          </li>
+
+
+
+          <!-- <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Blogs</a>
+          </li> -->
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link><i class='bx bxs-message-dots'></i>Chat</a>
+          </li>
+
+        </ul>
+
+        <a href="" class="navbar-action-btn">Login</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="action-btn" aria-label="Search">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="action-btn user" aria-label="User">
+          <!-- <ion-icon name="person-outline" aria-hidden="true"></ion-icon> -->
+          <i class='bx bxs-user' aria-hidden="true"></i>
+        </button>
+
+        <button class="action-btn" aria-label="cart">
+          <!-- <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon> -->
+          <i class='bx bxs-bell' aria-hidden="true" ></i>
+          <span class="btn-badge" style="background-color: red;">5</span>
+        </button>
+
+      </div>
+
+    </div>
+  </header>  
+
+
+
+<a-scene
+  arjs
+  embedded
+  renderer="logarithmicDepthBuffer: true;"
+  vr-mode-ui="enabled: false"
+  gesture-detector
+  id="scene"
+>
+  <a-assets>
+    <a-asset-item
+      id="bowser"
+      src="rv-img/5saturno.glb"
     >
-      <a-assets>
-        <a-asset-item
-          id="bowser"
-          src="dist/charmander.glb"
-        >
-        </a-asset-item>
-      </a-assets>
+    </a-asset-item>
+  </a-assets>
 
-      <a-marker
-        preset="hiro"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
+  <a-marker
+    preset="hiro"
+    raycaster="objects: .clickable"
+    emitevents="true"
+    cursor="fuse: false; rayOrigin: mouse;"
+    id="markerA"
+  >
 
-        <a-entity
-          id="bowser-model"
-          gltf-model="#bowser"
-          position="0 0 0"
-          scale="0.05 0.05 0.05"
-          class="clickable"
-          gesture-handler
-        >
-        </a-entity>
-   
-      </a-marker>
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+    <a-entity
+      id="bowser-model"
+      gltf-model="#bowser"
+      position="0 0 0"
+      scale="0.05 0.05 0.05"
+      class="clickable"
+      gesture-handler
+    >
+    </a-entity>
+
+  </a-marker>
+  <a-entity camera></a-entity>
+</a-scene>
+
+<div class="container-chat">
+
+  <p class="data1">data 1</p>
+  <p class="data2">data 2</p>
+</div>
+<center>
+  <button class="back-button" onclick="goBack()">Back</button>
+</center>
+
+
+<audio autoplay>
+  <source src="./sala/sonido/sonido.mp3" type="audio/mpeg">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+
+<script>
+  function goBack() {
+      window.history.back();
+  }
+</script>
+
+<style>
+  .container-chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.data1 {
+    float: left;
+}
+
+.data2 {
+    float: right;
+}
+
+.back-button {
+  text-align: center;
+    background-color: #191d21;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+</style>
+
+</body>
 </html>

@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descripción relevante de tu sitio web">
+    <meta name="keywords" content="palabras clave, relevantes, para, tu, sitio">
+    <title>Socket.io Game - NASA RV</title>
+  </head>
+  <style>
+
+model-viewer {
+  width: 100%;
+  height: 80vh;
+}
+
+  </style>
+
+<body>
+
+
+  <script src="https://modelviewer.dev/shared-assets/webxr-viewer/mobile-viewer.js"></script> 
+    <!-- Modelo 3D -->
+  
+    <model-viewer
+        alt="ropa"
+        src="sonido/images/asteroid.glb"
+        ar ar-modes="webxr scene-viewer quick-look"
+        seamless-poster
+        shadow-intensity="1"
+        camera-controls
+        ar
+        ar-modes="webxr quick-look"
+        ar-button
+        ar-placement="floor"
+        progress-bar
+        width="360px"
+        height="360px"
+    ></model-viewer>
+
+
+
+<audio autoplay>
+  <source src="sonido/music.mp3" type="audio/mpeg">
+  <!-- Puedes agregar más elementos <source> con diferentes formatos de audio para mayor compatibilidad -->
+  Tu navegador no admite la reproducción de audio.
+</audio>
+
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="sonido/game.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.2.0/socket.io.js"></script>
+</script>
+</body>
+</html>

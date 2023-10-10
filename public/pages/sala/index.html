@@ -5,9 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Descripción relevante de tu sitio web">
     <meta name="keywords" content="palabras clave, relevantes, para, tu, sitio">
-    <title>Socket.io Game - NASA RV</title>
+    <title>comet-coders</title>
+    <link rel="shortcut icon" href="assets/images/logo/CosmicVR-AI-App.png" type="image/svg+xml">
+    <link rel="stylesheet" href="sonido/style.css">
+
+          <!-- 
+    - google font link
+  -->
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bangers&family=Carter+One&family=Nunito+Sans:wght@400;700&display=swap"
+    rel="stylesheet">
+
   </head>
   <style>
+    
+
+body {
+ background-color: #000000;
+ color: #fff;
+}
 
 model-viewer {
   width: 100%;
@@ -16,7 +35,77 @@ model-viewer {
 
   </style>
 
-<body>
+<body id="top">
+
+
+  <header class="header" data-header>
+    <div class="container">
+
+      <button class="nav-toggle-btn" aria-label="toggle manu" data-nav-toggler>
+        <ion-icon name="menu-outline" aria-hidden="true" class="menu-icon"></ion-icon>
+        <ion-icon name="close-outline" aria-label="true" class="close-icon"></ion-icon>
+      </button>
+
+      <!-- <a href="#" class="logo">C-coders</a> -->
+      <!-- <img src="assets/images/logo/CosmicVR-AI-App-2.png" alt="" width="80" height="80" style="background-color: black;"> -->
+
+      <nav class="navbar" data-navbar>
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-link><i class='bx bx-home-alt-2'></i>Home</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#shop" class="navbar-link" data-nav-link><i class='bx bxs-rocket'></i>Collection</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link><i class='bx bxs-planet'></i>category</a>
+          </li>
+
+
+
+          <!-- <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link>Blogs</a>
+          </li> -->
+
+          <li class="navbar-item">
+            <a href="#" class="navbar-link" data-nav-link><i class='bx bxs-message-dots'></i>Chat</a>
+          </li>
+
+        </ul>
+
+        <a href="" class="navbar-action-btn">Login</a>
+      </nav>
+
+      <div class="header-actions">
+
+        <button class="action-btn" aria-label="Search">
+          <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+        </button>
+
+        <button class="action-btn user" aria-label="User">
+          <!-- <ion-icon name="person-outline" aria-hidden="true"></ion-icon> -->
+          <i class='bx bxs-user' aria-hidden="true"></i>
+        </button>
+
+        <button class="action-btn" aria-label="cart">
+          <!-- <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon> -->
+          <i class='bx bxs-bell' aria-hidden="true" ></i>
+          <span class="btn-badge" style="background-color: red;">5</span>
+        </button>
+
+        <center>
+          <button class="back-button" onclick="goBack()"> Back </button>
+        </center>
+
+      </div>
+
+    </div>
+  </header>  
+
+
 
 
 
@@ -41,13 +130,59 @@ model-viewer {
         height="360px"
     ></model-viewer>
 
+    <div class="container-chat">
 
+      <p class="data1">It is a finite region of space described in Einstein's equations, </p>
+      <p class="data2">whose interior has a mass concentration high enough to generate a gravitational field.</p>
+    </div>
 
 <audio autoplay>
-  <source src="sonido/music.mp3" type="audio/mpeg">
+  <source src="sonido/sonido.mp3" type="audio/mpeg">
   <!-- Puedes agregar más elementos <source> con diferentes formatos de audio para mayor compatibilidad -->
   Tu navegador no admite la reproducción de audio.
 </audio>
+
+<df-messenger intent="WELCOME" chat-title="bots" agent-id="86938b5f-1e37-43dc-9f38-1bd5322b1eb7" language-code="es">
+</df-messenger>
+<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+
+<script>
+  function goBack() {
+      window.history.back();
+  }
+</script>
+
+<style>
+  .container-chat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.data1 {
+    float: left;
+}
+
+.data2 {
+    float: right;
+}
+
+.back-button {
+  text-align: center;
+    background-color: #191d21;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.back-button:hover {
+    background-color: #0056b3;
+}
+
+</style>
 
 
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>

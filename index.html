@@ -15,7 +15,7 @@
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css'>
     <link rel='stylesheet' href='https://cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css'>
     
-    <!-- <link rel="stylesheet" href="public/assets/css/css.css"> -->
+    <link rel="stylesheet" href="public/assets/css/css.css">
     
 </head>
 
@@ -26,7 +26,7 @@ body {
     overflow: hidden;
     position: relative;
     font-family: Arial, sans-serif; /* Cambia la fuente a tu preferencia */
-    background-color: black;
+    /* background-color: black; */
 }
 
 #video-background {
@@ -64,22 +64,31 @@ body {
 <br><br><br><br><br><br><br><br>
 <div class="overlay-text">
 
-  <h1>Welcome,
+
+  <audio autoplay>
+    <source src="public/pages/sala/sonido/sonido.mp3" type="audio/mpeg">
+    Tu navegador no soporta el elemento de audio.
+  </audio>
+
+  <h1>Welcome,<br>
     Space Explorers</h1>
-    <img src="public/assets/images/logo/Gif_CargarPag ‐ Hecho con Clipchamp.gif" alt="">
+    <img src="./public/assets/images/logo/Gif_CargarPag ‐ Hecho con Clipchamp.gif" alt="">
 </div>
 
 
-<!-- 
+
+
+
+
 <div id='Cargando'>
  
 </div>
-. -->
+
 
 <script>
   function redireccionar() {
       window.location.href = "./public";
   }
 
-  setTimeout("redireccionar()", 5200);
+  setTimeout("redireccionar()", 13200);
 </script>

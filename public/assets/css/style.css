@@ -91,11 +91,12 @@
 model-viewer {
   width: 100%;
   height: 80vh;
+  background-color: #0000;
 }
 
 /* Estilo para el icono */
 .img-camara {
-  color: rgb(3, 6, 33);
+  color: rgb(255, 255, 255);
   font-size: 5em; /* Cambia el tamaño a tu preferencia */
   position: relative; /* Permite la superposición */
   top: -100px; /* Ajusta la posición vertical según tus necesidades */
@@ -229,6 +230,7 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  background-color: #000;
 }
 
 .has-scrollbar {

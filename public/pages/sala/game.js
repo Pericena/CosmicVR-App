@@ -10,7 +10,7 @@ var FPS = 60;
 /* Canvas, images, and rendering */
 var canvas = document.createElement('canvas');
 var ctx = canvas.getContext('2d');
-canvas.width = 1000;
+canvas.width = 800;
 canvas.height = 500;
 document.body.appendChild(canvas);
 
@@ -37,7 +37,7 @@ var renderPlayers = function () {
     }
 
     ctx.fillStyle = 'rgb(255, 255, 255)';
-    ctx.font = '14px arial';
+    ctx.font = '14px';
     ctx.textAlign = 'center';
     ctx.textBaseline = 'top';
     ctx.fillText(players[player].name, players[player].x + 24, players[player].y - 18);
@@ -46,7 +46,7 @@ var renderPlayers = function () {
 
 var renderStats = function () {
   ctx.fillStyle = 'rgb(255, 255, 255)';
-  ctx.font = '18px arial';
+  ctx.font = '18px';
   ctx.textAlign = 'left';
   ctx.textBaseline = 'top';
   ctx.fillText('Users online: ' + numPlayers, 10, 10);

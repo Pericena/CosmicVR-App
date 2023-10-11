@@ -26,7 +26,7 @@
 /* Estilos para el contenedor principal */
 #container2 {
             position: relative;
-            width: 1000px;
+            width: auto;
             height: 500px;
             margin: 0 auto;
         }
@@ -34,23 +34,34 @@
 /* Estilos para el canvas del juego */
 canvas {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 100px; /* Ajusta la posición vertical según tus necesidades */
+    left: 100px; /* Ajusta la posición horizontal según tus necesidades */
     z-index: 1;
+
+}
+
+
+/* Media query para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media (max-width: 400px) {
+  canvas {
+    width: 100%; /* Establece el ancho al 100% del contenedor */
+    height: auto; /* Establece la altura automática para mantener la proporción */
+    
+  }
 }
 
 /* Estilos para el modelo 3D (model-viewer) */
 model-viewer {
     position: fixed; /* Utiliza fixed para que el elemento sea móvil y no se vea afectado por el scroll */
-    top: 20px; /* Ajusta la posición vertical según tus necesidades */
-    left: 20px; /* Ajusta la posición horizontal según tus necesidades */
+    top: 0px; /* Ajusta la posición vertical según tus necesidades */
+    left: 0px; /* Ajusta la posición horizontal según tus necesidades */
     width: 100%; /* Define el ancho del elemento */
     height: 100%; /* Define la altura del elemento */
     z-index: 2; /* Ajusta el z-index según tus necesidades */
     text-align: center;
 }
 
-        
+ 
 
         /* Estilos generales */
         body {
@@ -109,16 +120,20 @@ input:focus {
   z-index: 9999;
   background-color: #080913;
   opacity: 0.9;
-  /* background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8),rgba(0, 9, 17, 0.8)), 
-  url('https://raw.githubusercontent.com/Pericena/happybirthday.github.io/main/descarga2.png'); */
-  background-repeat: no-repeat;
-  /* opacity: 0.5; */
   background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+/* Media query para pantallas de 600px o menos */
+@media (max-width: 400px) {
+  .player-input {
+    width: 95%; /* Ajusta el ancho al 95% del ancho de la ventana */
+    max-width: none; /* Elimina el límite máximo de ancho */
+  }
 }
 
 .player-input input,
@@ -227,7 +242,7 @@ input:focus {
 
  
   <div class="player-input" id="start">
-    <img src="sonido/images/player2.png" width="100" height="100" alt="logo">
+    <img src="sonido/images/player2.png" width="70" height="70" alt="logo">
     <h2>Login</h2>
     <!-- <div id="mensaje" class="mensaje hidden"></div> -->
     <input id="player" type="password" placeholder="Nombre del usuario" />
@@ -243,7 +258,7 @@ input:focus {
  
   <div id="container2">
     <!-- Canvas del juego -->
-    <canvas id="gameCanvas" width="1000" height="500"></canvas>
+    <canvas id="gameCanvas" width="800" height="300"></canvas>
 
     <!-- Modelo 3D -->
     <model-viewer

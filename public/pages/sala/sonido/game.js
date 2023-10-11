@@ -1,4 +1,5 @@
-var socket = io();
+var socket = io(); // Configura tu conexión de Socket.io
+
 var keyboard = {};
 var players = {};
 var numPlayers = 0;
@@ -115,6 +116,42 @@ var startConnection = function () {
   var backgroundMusic = document.getElementById('backgroundMusic');
   backgroundMusic.volume = 0.5; // Ajusta el volumen según tus preferencias
 
+  var chatContainer = document.getElementById('chat-container');
+  var chatInput = document.getElementById('chat-input');
+  var chatMessages = document.getElementById('chat-messages');
+
+  function sendMessage(message) {
+    // Envia el mensaje al servidor y muestra el mensaje localmente
+    socket.emit('chat message', message);
+    displayMessage('Tú', message);
+  }
+
+  function displayMessage(sender, message) {
+    var messageElement = document.createElement('p');
+    messageElement.textContent = sender + ': ' + message;
+    chatMessages.appendChild(messageElement);
+
+    // Scroll automático hacia el nuevo mensaje
+    chatContainer.scrollTop = chatContainer.scrollHeight;
+  }
+
+  // Escuchar eventos de teclado para enviar mensajes cuando se presione Enter
+  chatInput.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      var message = chatInput.value.trim();
+      if (message !== '') {
+        sendMessage(message);
+        chatInput.value = '';
+      }
+    }
+  });
+
+  // Escuchar eventos de chat del servidor
+  socket.on('chat message', function (data) {
+    displayMessage(data.sender, data.message);
+  });
+
   // Iniciar el bucle de juego
   loop();
 }
+

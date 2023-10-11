@@ -10,8 +10,8 @@ var FPS = 60;
 /* Canvas, images, and rendering */
 var canvas = document.createElement('canvas');
 var ctx = canvas.getContext('2d');
-canvas.width = 800;
-canvas.height = 300;
+canvas.width = 1000;
+canvas.height = 500;
 document.body.appendChild(canvas);
 
 var playerReady = false;

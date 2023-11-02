@@ -8,7 +8,7 @@
     <title>comet-coders</title>
     <!-- <link rel="shortcut icon" href="assets/images/logo/CosmicVR-AI-App.png" type="image/svg+xml"> -->
     <link rel="stylesheet" href="sonido/style.css">
-
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
           <!-- 
     - google font link
   -->
@@ -35,7 +35,8 @@ model-viewer {
 
   </style>
 
-<body id="top">
+<body  id="top" style="background-color: black;"> <!-- Establecer el fondo negro -->
+
 
 
   <header class="header" data-header>
@@ -109,55 +110,135 @@ model-viewer {
 
 
 
-
-
-  <script src="https://modelviewer.dev/shared-assets/webxr-viewer/mobile-viewer.js"></script> 
-    <!-- Modelo 3D -->
-  
-    <model-viewer
-        alt="ropa"
-        src="sonido/images/space-nave.glb"
-        ar ar-modes="webxr scene-viewer quick-look"
-        seamless-poster
-        shadow-intensity="1"
-        camera-controls
-        ar
-        ar-modes="webxr quick-look"
-        ar-button
-        ar-placement="floor"
-        progress-bar
-        width="360px"
-        height="360px"
-    ></model-viewer>
-
-    <div class="container-chat">
-
-      <p class="data1">It is a finite region of space described in Einstein's equations, </p>
-      <p class="data2">whose interior has a mass concentration high enough to generate a gravitational field.</p>
+  <!-- Ventana emergente para usar gafas VR -->
+  <div class="popup" id="vrPopup">
+    <div class="popup-message">
+      <h2>Use Virtual Reality glasses for a better experience!</h2>
+      <p>The VR glasses will provide total immersion in this experience.</p>
+      <button class="btbaok" onclick="closePopup()">Aceptar</button>
     </div>
+  </div>
 
-<audio autoplay>
-  <source src="sonido/1blackhole.mp3" type="audio/mpeg">
-  <!-- Puedes agregar más elementos <source> con diferentes formatos de audio para mayor compatibilidad -->
-  Tu navegador no admite la reproducción de audio.
-</audio>
 
-<df-messenger intent="WELCOME" chat-title="bots" agent-id="86938b5f-1e37-43dc-9f38-1bd5322b1eb7" language-code="es">
-</df-messenger>
+  <a-scene vr-mode-ui="enabled: true"> <!-- Habilitar el modo RV y mostrar el botón de RV -->
+
+    <!-- Agregar la cámara para la vista del usuario (con lentes estereoscópicos) -->
+    <a-camera look-controls="magicWindowTracking: true" wasd-controls="fly: true"></a-camera>
+
+    <!-- Agregar un entorno de luz para una mejor visualización -->
+    <a-light type="ambient" color="#888"></a-light>
+
+    <!-- Agregar un objeto de sonido para la música de fondo -->
+    <!-- <a-sound src="url(https://github.com/Pericena/CosmicVR-App/raw/main/public/pages/sala/sonido/sonido.mp3)" autoplay="true" loop="true"></a-sound> -->
+
+    <!-- Agregar el planeta 3D (asegúrate de que el archivo planeta.glb esté en la carpeta correcta) -->
+    <a-entity
+      gltf-model="url(https://github.com/Pericena/CosmicVR-App/raw/main/public/pages/sala/sonido/images/space-nave.glb)"
+      position="0 1 -3"
+      scale="0.5 0.5 0.5"
+    ></a-entity>
+
+    <!-- Agregar un menú con instrucciones -->
+    <a-entity
+      id="menu"
+      position="-2 2 -4"
+      rotation="0 45 0"
+      text="value: use with rv glasses; color: white; align: center; width: 4;font-size:10px"
+    ></a-entity>
+  </a-scene>
+
+   <!-- Agregar una tarjeta de instrucciones de movimiento -->
+   <div class="card">
+    <p>Mover con las teclas:</p>
+    <p>Arriba: W</p>
+    <p>Abajo: S</p>
+    <p>Derecha: D</p>
+    <p>Izquierda: A</p>
+  </div>
+
+  <div class="container-chat">
+
+    <p class="data1">It is a finite region of space described in Einstein's equations, </p>
+    <p class="data2">whose interior has a mass concentration high enough to generate a gravitational field.</p>
+  </div>
+
+  <audio autoplay>
+    <source src="sonido/1blackhole.mp3" type="audio/mpeg">
+    <!-- Puedes agregar más elementos <source> con diferentes formatos de audio para mayor compatibilidad -->
+    Tu navegador no admite la reproducción de audio.
+  </audio>
+
+  
+<!-- <df-messenger intent="WELCOME" chat-title="bots" agent-id="86938b5f-1e37-43dc-9f38-1bd5322b1eb7" language-code="es">
+</df-messenger> -->
 <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
 
 <script>
-  function goBack() {
-      window.history.back();
-  }
-</script>
+    function goBack() {
+        window.history.back();
+    }
+  </script>
 
 <style>
+    .btbaok
+    {
+      color: #ffffff;
+      font-size: 15px;
+      padding: 10px;
+      background: #f40e0e;
+      border-radius:10%;
+      align-items: center;
+      text-align: center;
+    }
+
+      /* Estilo para la ventana emergente */
+      .popup {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(51, 51, 51, 0.7);
+      z-index: 1;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .popup-message {
+      background: #2c2b2b;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      
+    }
+
+
+  .card {
+      position: fixed;
+      top: 100px;
+      left: 10px;
+      background: rgba(45, 45, 45, 0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 10px;
+    }
+
+
+    
   .container-chat {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+    position: fixed;
+      top: 500px;
+      justify-content: space-between;
+      align-items: center;
+      text-align: center;
+      background: rgba(45, 45, 45, 0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 10px;
 }
 
 .data1 {
@@ -180,10 +261,26 @@ model-viewer {
 .back-button:hover {
     background-color: #0056b3;
 }
-
 </style>
 
 
+  <script>
+    // Función para abrir la ventana emergente
+    function openPopup() {
+      var popup = document.getElementById("vrPopup");
+      popup.style.display = "flex";
+    }
+
+    // Función para cerrar la ventana emergente
+    function closePopup() {
+      var popup = document.getElementById("vrPopup");
+      popup.style.display = "none";
+    }
+
+    // Abre la ventana emergente al cargar la página
+    window.onload = openPopup;
+  </script>
+  
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 <!-- 
   <script src="/socket.io/socket.io.js"></script>

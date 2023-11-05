@@ -13,6 +13,7 @@
     - google font link
   -->
   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -115,7 +116,7 @@ model-viewer {
     <div class="popup-message">
       <h2>Use Virtual Reality glasses for a better experience!</h2>
       <p>The VR glasses will provide total immersion in this experience.</p>
-      <button class="btbaok" onclick="closePopup()">Aceptar</button>
+      <button class="btbaok" onclick="closePopup()">Ok</button>
     </div>
   </div>
 
@@ -149,15 +150,14 @@ model-viewer {
 
    <!-- Agregar una tarjeta de instrucciones de movimiento -->
    <div class="card">
-    <p>Mover con las teclas:</p>
-    <p>Arriba: W</p>
-    <p>Abajo: S</p>
-    <p>Derecha: D</p>
-    <p>Izquierda: A</p>
+    <p><i class='bx bx-joystick'></i> Move with keys:</p>
+    <p><i class='bx bxs-up-arrow-square'></i> Up: W</p>
+    <p><i class='bx bxs-down-arrow-square'></i> Down: S</p>
+    <p><i class='bx bxs-right-arrow-square'></i> Right: D</p>
+    <p><i class='bx bxs-left-arrow-square'></i> Left: A</p>
   </div>
 
   <div class="container-chat">
-
     <p class="data1">It is a finite region of space described in Einstein's equations, </p>
     <p class="data2">whose interior has a mass concentration high enough to generate a gravitational field.</p>
   </div>
@@ -207,10 +207,10 @@ model-viewer {
     }
 
     .popup-message {
-      background: #2c2b2b;
+      background: rgb(3, 6, 33);
       padding: 20px;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 0 10px rgb(3, 6, 33);
       
     }
 
@@ -219,11 +219,11 @@ model-viewer {
       position: fixed;
       top: 100px;
       left: 10px;
-      background: rgba(45, 45, 45, 0.7);
+      background: rgb(3, 6, 33);
       color: white;
       padding: 10px;
       border-radius: 10px;
-      font-size: 10px;
+      font-size: 14px;
     }
 
 
@@ -259,7 +259,7 @@ model-viewer {
 }
 
 .back-button:hover {
-    background-color: #0056b3;
+    background-color: rgb(3, 6, 33);
 }
 </style>
 
@@ -277,8 +277,40 @@ model-viewer {
       popup.style.display = "none";
     }
 
+// Función para detectar si el navegador es Google Chrome
+function isChrome() {
+    const isChromium = window.chrome;
+    const winNav = window.navigator;
+    const vendorName = winNav.vendor;
+    const isOpera = winNav.userAgent.indexOf("OPR") > -1;
+    const isIEedge = winNav.userAgent.indexOf("Edg") > -1;
+
+    if (isChromium !== null && typeof isChromium !== "undefined" && isOpera === false && isIEedge === false) {
+        // Es Google Chrome
+        return true;
+    }
+
+    return false;
+}
+
+// Función para mostrar un mensaje si el navegador es Google Chrome
+function showMessage() {
+    if (isChrome()) {
+        // alert("Estás usando Google Chrome.");
+    } else {
+        alert("You are not using Google Chrome. the commet coders app only works for google chrome");
+    }
+}
+
+// Llama a la función para mostrar el mensaje
+showMessage();
+
+
+
     // Abre la ventana emergente al cargar la página
     window.onload = openPopup;
+
+
   </script>
   
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>

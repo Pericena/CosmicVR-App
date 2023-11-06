@@ -1,3 +1,4 @@
+console.log('Service Worker');
 const CACHE_NAME = 'v1_pwa_app_cache';
 const urlsToCache = [
   './',
@@ -8,7 +9,7 @@ const urlsToCache = [
   'assets/js/script.js',
   'assets/js/slider.js',
   'js/script_pwa.js',
-  'assets/images/logo/s2.png',
+  'assets/images/logo/logo.png',
   'assets/images/.*',
   'assets/sonido/musica.mp3',
 

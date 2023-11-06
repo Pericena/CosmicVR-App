@@ -16,11 +16,10 @@
   <!-- 
     - favicon
   -->
-  <link rel="shortcut icon" href="assets/images/logo/CosmicVR-AI-App.png" type="image/svg+xml">
+  <link rel="shortcut icon" href="./assets/images/logo/logo.png" type="image/svg+xml">
 
 
-    <!-- Archivo de manifiesto de la aplicación web -->
-    <link rel="manifest" href="./manifest.json">
+
 
     <!-- Metaetiqueta para el color de tema en dispositivos móviles -->
     <meta name="theme-color" content="rgb(3, 6, 33)">
@@ -34,11 +33,15 @@
   <!-- Metaetiqueta para personalizar la barra de estado en dispositivos iOS -->
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <!-- Icono de acceso directo en la barra de tareas y en dispositivos iOS -->
-  <link rel="shortcut icon" type="image/png" href="assets/images/logo/CosmicVR-AI-App.png">
-  <link rel="apple-touch-icon" href="assets/images/logo/CosmicVR-AI-App.png">
+  <link rel="shortcut icon" type="image/png" href="./assets/images/logo/logo.png">
+  <link rel="apple-touch-icon" href="./assets/images/logo/logo.png">
+
+    <!-- Archivo de manifiesto de la aplicación web -->
+    <link rel="manifest" href="./manifest.json">
+    
 
     <!-- Imagen de inicio en dispositivos iOS -->
-    <link rel="apple-touch-startup-image" href="assets/images/logo/CosmicVR-AI-App.png">
+    <link rel="apple-touch-startup-image" href="assets/images/logo/logo.png">
 
   <!-- 
     - custom css link
@@ -126,11 +129,12 @@
           <i class='bx bxs-user' aria-hidden="true"></i>
         </button>
 
-        <button class="action-btn" aria-label="cart">
+        <button class="action-btn" aria-label="cart" id="enableNotifications">
           <!-- <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon> -->
           <i class='bx bxs-bell' aria-hidden="true" ></i>
           <span class="btn-badge" style="background-color: red;">5</span>
         </button>
+
 
       </div>
 
@@ -1475,6 +1479,7 @@
   <!-- 
     - custom js link
   -->
+  <script src="./notificacion.js"></script>
   <script src="./assets/js/script.js" defer></script>
 
   <!-- 

@@ -4,16 +4,16 @@
       {
         "title": "CosmicVR-AI-App",
         "body": "Programa de divulgación científica para estudiantes apasionados por STEM..",
-        "icon": "assets/images/logo/s2.png",
+        "icon": "./assets/images/logo/logo.png",
         "silent": false,
-        "sound": "assets/sonido/music.mp3"
+        "sound": "./assets/sonido/music.mp3"
       },
       {
         "title": "CosmicVR-AI-App",
         "body": "Programa de divulgación científica para estudiantes apasionados por STEM..",
-        "icon": "assets/images/logo/s2.png",
+        "icon": "./assets/images/logo/logo.png",
         "silent": true,
-        "sound": "assets/sonido/music.mp3"
+        "sound": "./assets/sonido/music.mp3"
       }
 
     ]

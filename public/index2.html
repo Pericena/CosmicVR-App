@@ -9,6 +9,7 @@
     <title>comet-coders</title>
     <!-- <link rel="shortcut icon" href="assets/images/logo/CosmicVR-AI-App.png" type="image/svg+xml"> -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="./assets/js/notificacion.js"></script>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
           <!-- 
     - google font link
@@ -130,7 +131,12 @@
     <p>Izquierda: A</p>
   </div>
 
+  
   <div class="container-chat">
+
+    <div class="container">
+      <button id="enableNotifications">🔔 Enable Notification</button>
+    </div>
 
     <p class="data1">It is a finite region of space described in Einstein's equations, </p>
     <p class="data2">whose interior has a mass concentration high enough to generate a gravitational field.</p>
@@ -156,6 +162,17 @@
 
 </body>
 <style>
+
+      #enableNotifications {
+        height: 80px;
+        width: 350px;
+        background-color: black;
+        color: white;
+        border: 1px;
+        border-radius: 500px;
+        font-size: 24px;
+      }
+
     .card {
       position: fixed;
       top: 100px;
